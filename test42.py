@@ -12,11 +12,9 @@ class InternetBank(object):
         correct_pin_code = 333
         if pin_code != correct_pin_code:
             self.attempts -= 1
-            self.user_can_get_money = False
             print 'jojo'
             return False
         if self.attempts == 0:
-            self.user_can_get_money = False
             print 'haha'
             return False
         if pin_code == correct_pin_code:

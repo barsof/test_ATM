@@ -21,10 +21,10 @@ class TestInternetBank(unittest.TestCase):
 #         my_money = self.terminal.top_up_money(-5000)
 #         self.assertEqual(my_money, 0)
 
-
-    def test_top_up_account_mines_1(self):
-         my_money = self.terminal.top_up_money('d')
-         self.assertEqual(my_money, 5000)
+    #
+    # def test_top_up_account_mines_1(self):
+    #      my_money = self.terminal.top_up_money('d')
+    #      self.assertEqual(my_money, 5000)
 
 
     # def test_minus_sum(self):
@@ -59,9 +59,43 @@ class TestInternetBank(unittest.TestCase):
 #         self.assertEqual(self.terminal.attempts, 0)
 #         self.assertTrue(self.terminal.user_can_get_money)
 
+    # def test_balance_cash_back_money_5000(self):
+    #     is_cash = self.terminal.cash_back_money(5000)
+    #     self.assertEqual(self.terminal.balance, 0)
+
+    # def test_balance_cash_back_money_5001(self):
+    #     is_cash = self.terminal.cash_back_money(5001)
+    #     self.assertEqual(self.terminal.balance, 5000)
+
+#should be down
+    # def test_balance_cash_back_money_4999(self):
+    #     is_cash = self.terminal.cash_back_money(4999)
+    #     self.assertEqual(self.terminal.balance, 1)
 
 
 
+    # def test_balance_cash_back_money__1(self):
+    #     is_cash = self.terminal.cash_back_money(-1)
+    #     self.assertEqual(self.terminal.balance, 5001)
+
+    # should be down
+    # def test_balance_cash_back_money__1(self):
+    #     is_cash = self.terminal.cash_back_money(-2)
+    #     self.assertEqual(self.terminal.balance, 5002)
+
+#should be no give cash
+    # def test_balance_cash_back_money__1(self):
+    #     is_cash = self.terminal.cash_back_money(0)
+    #     self.assertEqual(self.terminal.balance, 5000)
+
+
+    # def test_cash_back_money_4000(self):
+    #     is_cash = self.terminal.cash_back_money(4000)
+    #     self.assertEqual(is_cash, 4000)
+
+    # def test_cash_back_money_5001(self):
+    #     is_cash = self.terminal.cash_back_money(5001)
+    #     self.assertEqual(is_cash, 5001)
 
 
 

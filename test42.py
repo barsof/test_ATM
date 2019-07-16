@@ -23,9 +23,21 @@ class InternetBank(object):
             return True
 
 
+    def cash_back_money(self,back_money):
+        if self.user_can_get_money :
+            if back_money <= self.balance:
+                print 'U can take', back_money, 'money'
+                self.balance = self.balance - back_money
+                return back_money
+            else:
+                return 'U have not enough money'
+
 
 
 
 tt = InternetBank()
 
-tt.enter_pin_code(33)
+# tt.enter_pin_code(333)
+# tt.cash_back_money(4999)
+# print tt.cash_back_money(2000)
+

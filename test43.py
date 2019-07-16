@@ -103,15 +103,24 @@ class TestInternetBank(unittest.TestCase):
     #     self.assertEqual(yes_check,5000)
 
     # test  account status negative
-    # def test_check_acc_status(self):
+    # def test_check_acc_status_neg(self):
     #     yes_check = self.terminal.check_acc_status(False)
     #     self.assertNotEqual(yes_check,5000)
 
 
+    #test  account status positive ahmed
+    def test_check_acc_status(self):
+        enter_pin = self.terminal.enter_pin_code(333)
+        self.assertTrue(self.terminal.check_acc_status())
+        self.assertEqual(self.terminal.balance, 5000)
 
+    def test_check_acc_status_neg(self):
+        enter_pin = self.terminal.enter_pin_code(11)
+        self.assertRaises(Exception)
 
 
 #    def test_enter_pin_code_not(self):
 #        my_pin_code = self.terminal.enter_pin_code(222)
 #        self.assertNotEqual(my_pin_code, 333)
+
 

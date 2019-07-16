@@ -1,3 +1,5 @@
+from exception import *
+
 class InternetBank(object):
     balance = 5000
     pin_code = 333
@@ -16,12 +18,12 @@ class InternetBank(object):
             return False
         if self.attempts == 0:
             print 'haha'
-            return False
+            raise AttempOver
+
         if pin_code == correct_pin_code:
             self.user_can_get_money = True
             print 'gg'
             return True
-
 
     def cash_back_money(self,back_money):
         if self.user_can_get_money :
@@ -33,15 +35,22 @@ class InternetBank(object):
                 return 'U have not enough money'
 
 
-    def check_acc_status (self, want_check):
+    # def check_acc_status (self, want_check):
+    #     if self.user_can_get_money:
+    #         if want_check==True:
+    #             return self.balance
+
+    def check_acc_status (self):
         if self.user_can_get_money:
-            if want_check==True:
                 return self.balance
+        else:
+            raise EnterPin
 
 
-tt = InternetBank()
+##tt = InternetBank()
 
 # tt.enter_pin_code(333)
 # tt.cash_back_money(4999)
 # print tt.cash_back_money(2000)
+
 

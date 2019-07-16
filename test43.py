@@ -97,6 +97,16 @@ class TestInternetBank(unittest.TestCase):
     #     is_cash = self.terminal.cash_back_money(5001)
     #     self.assertEqual(is_cash, 5001)
 
+    # #test  account status positive
+    # def test_check_acc_status(self):
+    #     yes_check = self.terminal.check_acc_status(True)
+    #     self.assertEqual(yes_check,5000)
+
+    # test  account status negative
+    # def test_check_acc_status(self):
+    #     yes_check = self.terminal.check_acc_status(False)
+    #     self.assertNotEqual(yes_check,5000)
+
 
 
 

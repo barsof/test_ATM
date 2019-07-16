@@ -33,6 +33,10 @@ class InternetBank(object):
                 return 'U have not enough money'
 
 
+    def check_acc_status (self, want_check):
+        if self.user_can_get_money:
+            if want_check==True:
+                return self.balance
 
 
 tt = InternetBank()
